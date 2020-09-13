@@ -1,8 +1,8 @@
 {
   "id": "2e843407-bafc-4fb7-8f6e-c16366a6bb4c",
   "version": "2.0",
-  "name": "Day_01",
-  "url": "http://automationpractice.com",
+  "name": "iTMS Tester Advance Automation",
+  "url": "http://www.practiceselenium.com",
   "tests": [{
     "id": "f20fb74f-fc29-4cda-865a-7215571c6dd4",
     "name": "Practice Form",
@@ -11,6 +11,13 @@
       "comment": "",
       "command": "open",
       "target": "/practice-form.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8265caa-8596-4f4e-aa40-2c701a0944ce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x662",
       "targets": [],
       "value": ""
     }, {
@@ -265,98 +272,6 @@
       "targets": [],
       "value": ""
     }]
-  }, {
-    "id": "a6711f73-9371-4ac2-b52f-db8d9cfadb38",
-    "name": "Switch Form",
-    "commands": [{
-      "id": "0df6f6d1-780e-466d-9a78-258c10878e64",
-      "comment": "",
-      "command": "open",
-      "target": "/switch-window",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a455f1f7-d6f0-4566-ae96-41e78b199901",
-      "comment": "",
-      "command": "click",
-      "target": "id=new-tab-button",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "208b8ee4-514f-45ca-b109-b51ab4f41879",
-      "comment": "",
-      "command": "storeWindowHandle",
-      "target": "root",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fb9e68c1-f9c2-4895-84b2-886f94baaa43",
-      "comment": "",
-      "command": "selectWindow",
-      "target": "handle=${root}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "682e1daf-3bcb-4d73-9858-8566b5af9479",
-      "comment": "",
-      "command": "click",
-      "target": "id=alert-button",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c4fec77f-796f-4440-90ee-471c37cd3835",
-      "comment": "",
-      "command": "assertAlert",
-      "target": "This is a test alert!",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "5f840ceb-4c81-4725-bd85-49106adb6689",
-    "name": "Verify",
-    "commands": [{
-      "id": "7702b1bf-a22b-4666-8e63-a363ace9cafd",
-      "comment": "",
-      "command": "open",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "af2f19e4-f2ab-43aa-81d5-4afa25406e1e",
-      "comment": "",
-      "command": "verifyTitle",
-      "target": "My Store",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fc2df445-f2d9-4a85-b779-fcd812c85bfd",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Sign in",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a400f27e-cb84-4e8a-8010-12fa93f779ab",
-      "comment": "",
-      "command": "verifyTitle",
-      "target": "Login - My Store",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "322f47d8-d485-4d20-b16b-b5677c8bc232",
-      "comment": "",
-      "command": "click",
-      "target": "css=#SubmitLogin > span",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f1a75edc-bf46-4e95-9b59-32a872f92a76",
-      "comment": "",
-      "command": "verifyText",
-      "target": "//*[@id=\"center_column\"]/div[1]/ol/li",
-      "targets": [],
-      "value": "An email address required."
-    }]
   }],
   "suites": [{
     "id": "e7c3c66a-8024-492a-9357-42025e8cb7da",
@@ -366,6 +281,6 @@
     "timeout": 300,
     "tests": ["f20fb74f-fc29-4cda-865a-7215571c6dd4"]
   }],
-  "urls": ["http://www.practiceselenium.com/", "https://itmscoaching.herokuapp.com/", "http://automationpractice.com/"],
+  "urls": ["http://www.practiceselenium.com/"],
   "plugins": []
 }
