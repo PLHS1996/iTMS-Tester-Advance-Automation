@@ -1,8 +1,8 @@
 {
   "id": "2e843407-bafc-4fb7-8f6e-c16366a6bb4c",
   "version": "2.0",
-  "name": "iTMS Tester Advance Automation",
-  "url": "http://www.practiceselenium.com",
+  "name": "Day01",
+  "url": "http://www.practiceselenium.com/practice-form.html",
   "tests": [{
     "id": "f20fb74f-fc29-4cda-865a-7215571c6dd4",
     "name": "Practice Form",
@@ -10,14 +10,7 @@
       "id": "1fc865b5-c903-401b-89ea-f994da123021",
       "comment": "",
       "command": "open",
-      "target": "/practice-form.html",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a8265caa-8596-4f4e-aa40-2c701a0944ce",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1054x662",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -265,7 +258,142 @@
       ],
       "value": ""
     }, {
-      "id": "26f11ac0-bbdd-45b7-97c6-c44823b760fe",
+      "id": "d43a4fa1-b456-46fc-9bc8-c2899dfff750",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f66ed8fe-cefb-4102-a0eb-ad5fc9045f0c",
+    "name": "Switch Form",
+    "commands": [{
+      "id": "970d2d06-2192-4b5f-ae36-65dbf659121b",
+      "comment": "",
+      "command": "open",
+      "target": "https://itmscoaching.herokuapp.com/switch-window",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a551b343-459f-499b-8f39-ad4bdaf3d74a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x748",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "045a5140-928e-4051-9991-5a34db1a60f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-tab-button",
+      "targets": [
+        ["id=new-tab-button", "id"],
+        ["css=#new-tab-button", "css:finder"],
+        ["xpath=//button[@id='new-tab-button']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open new tab')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4585",
+      "windowTimeout": 2000
+    }, {
+      "id": "88b9115a-0603-4f9d-8167-c5d772cc5aac",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c0ddf5e-f40c-476c-9af9-1b1d6140c776",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4585}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93c23198-c3cb-4f22-a91e-e760e3e737be",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dfd2b61-9332-4388-8f83-0e9fbe46d8a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=alert-button",
+      "targets": [
+        ["id=alert-button", "id"],
+        ["css=#alert-button", "css:finder"],
+        ["xpath=//button[@id='alert-button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open alert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e5b8a65-62fc-4993-b42b-9f879b5a999f",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "This is a test alert!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa59792b-8268-4810-8211-dda1ff60b6e5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "43684de4-86f3-402c-ba69-e22ee283f10b",
+    "name": "Verify",
+    "commands": [{
+      "id": "acbd8f16-8a4e-4073-9c49-51de111b60b8",
+      "comment": "",
+      "command": "open",
+      "target": "http://automationpractice.com/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c930011e-956b-4c15-a09d-f8b6e1133d76",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9cd17c6-7a28-47b0-b9bc-3692489d6bf6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2277f5d5-9a62-4be3-addf-eebab88ab514",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login - My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67281170-0f83-405c-a751-f6b5db3aeb2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SubmitLogin > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "177e1bde-a7cb-4c05-b406-faa0147ece2a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//*[@id=\"center_column\"]/div[1]/ol/li",
+      "targets": [],
+      "value": "An email address required."
+    }, {
+      "id": "3043e813-78f0-4fa7-82f2-072d5ad0ac2c",
       "comment": "",
       "command": "close",
       "target": "",
@@ -281,6 +409,6 @@
     "timeout": 300,
     "tests": ["f20fb74f-fc29-4cda-865a-7215571c6dd4"]
   }],
-  "urls": ["http://www.practiceselenium.com/"],
+  "urls": ["http://www.practiceselenium.com/", "http://www.practiceselenium.com/practice-form.html"],
   "plugins": []
 }
