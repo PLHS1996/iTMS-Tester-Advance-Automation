@@ -5,10 +5,15 @@ Feature: Login
 
     Scenario: Login vaild
         Given the login page is opened successfull
-        When user input the username and password valid
+        When user input the username is 'tomsmith' and password is 'SuperSecretPassword!'
         Then user can login to the system
 
-    Scenario: Login in-vaild
+    Scenario: Login with invalid username and password
         Given the login page is opened successfull
-        When user input the username and password invalid
-        Then user cannot login to the system
+        When user input username and password are wrong
+        Then user cannot login to the system with username and password are wrong
+
+    Scenario: Login with invalid password
+        Given the login page is opened successfull
+        When user input username is 'tomsmith' and password is wrong
+        Then user cannot login to the system with username and password is wrong
