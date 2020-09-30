@@ -1,19 +1,20 @@
-Feature: Login
+Feature: Login function
     As a user,
-    I want to login in the website,
-    So I need to have username and password
+    I want to login in to website,
+    So that I can access successfully
 
-    Scenario: Login vaild
-        Given the login page is opened successfull
-        When user input the username is 'tomsmith' and password is 'SuperSecretPassword!'
-        Then user can login to the system
+    Scenario Outline: Login invalid
+        Given Go to the login page
+        When Enter username: '<username>' and password: '<password>'
+        And Press login
+        Then '<result>' result should be listed
+        Examples:
+            | username | password            | result                    |
+            | sonplh   | 123456!             | Your username is invalid! |
+            | tomsmith | SuperSecretPassword | Your password is invalid! |
 
-    Scenario: Login with invalid username and password
-        Given the login page is opened successfull
-        When user input username and password are wrong
-        Then user cannot login to the system with username and password are wrong
-
-    Scenario: Login with invalid password
-        Given the login page is opened successfull
-        When user input username is 'tomsmith' and password is wrong
-        Then user cannot login to the system with username and password is wrong
+    Scenario: Login valid
+        Given Go to the login page
+        When Enter username: 'tomsmith' and password: 'SuperSecretPassword!'
+        And Press login
+        Then  'You logged into a secure area!' result should be listed
